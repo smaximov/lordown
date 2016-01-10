@@ -3,7 +3,10 @@
 #+EMAIL: s.b.maximov@gmail.com
 #+DATE: 2016-01-10
 
-Convert Markdown ([[https://commonmark.org][CommonMark]]) to [[https://www.linux.org.ru/help/lorcode.md][Lorcode]] markup using [[http://pandoc.org][Pandoc]].
+Convert Markdown ([[https://commonmark.org][CommonMark]]) to [[https://www.linux.org.ru/help/lorcode.md][Lorcode]] markup using [[http://pandoc.org][Pandoc]]. Supports CommonMark with some additions:
+
+- headers of any level are converted to =[strong]text[/strong]=;
+- Use SO mention/notify syntax =@maxcom= to produce =[user]maxcom[/user]=.
 
 * Installation
 
@@ -17,10 +20,23 @@ You should have [[http://haskellstack.org][Stack]] installed.
   stack setup
   # Build
   stack build
-  # Install to ~/.local/bin (use --local-bin-path to specify target directory)
+  # Install lorcode binary to ~/.local/bin (use --local-bin-path to specify target directory)
   stack install
 #+END_SRC
 
 * Usage
 
+=lordown= provides both a library and an executable.
+
+** Executable
+
 =lordown= reads Markdown from =stdin= and writes converted markup to =stdout=.
+
+** As a library
+
+#+BEGIN_SRC haskell
+  import Text.Pandoc.Lordown (convert)
+
+  main :: IO ()
+  main = interact convert
+#+END_SRC
