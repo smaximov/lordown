@@ -1,0 +1,6 @@
+#+TITLE: Readme for Lordown
+#+AUTHOR: Sergei Maximov
+#+EMAIL: s.b.maximov@gmail.com
+#+DATE: 2016-01-10
+
+Convert Markdown ([[https://commonmark.org][CommonMark]]) to [[https://www.linux.org.ru/help/lorcode.md][Lorcode]] Markup using [[http://pandoc.org][Pandoc]].
