@@ -6,7 +6,7 @@
 Convert Markdown ([[https://commonmark.org][CommonMark]]) to [[https://www.linux.org.ru/help/lorcode.md][Lorcode]] markup using [[http://pandoc.org][Pandoc]]. Supports CommonMark with some additions:
 
 - headers of any level are converted to =[strong]text[/strong]=;
-- Use SO mention/notify syntax =@maxcom= to produce =[user]maxcom[/user]=.
+- use SO mention/notify syntax =@maxcom= to produce =[user]maxcom[/user]=.
 
 * Installation
 
@@ -30,7 +30,18 @@ You should have [[http://haskellstack.org][Stack]] installed.
 
 ** Executable
 
-=lordown= reads Markdown from =stdin= and writes converted markup to =stdout=.
+=lordown -h=:
+
+#+BEGIN_EXAMPLE
+  lordown v0.1.1.0 - Markdown to Lorcode converter
+  Reads Markdown from standard input and writes converted markup to standard output
+
+  Usage: lordown
+
+  Options:
+    -h  --help     Show this message
+    -v  --version  Display version
+#+END_EXAMPLE
 
 ** As a library
 

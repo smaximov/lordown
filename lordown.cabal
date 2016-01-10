@@ -1,7 +1,11 @@
 name:                lordown
-version:             0.1.0.0
+version:             0.1.1.0
 synopsis:            LorCode writer for Pandoc
-description:         Please see README.md
+description:
+        Convert Markdown ([CommonMark](https://commonmark.org)) to [Lorcode](https://www.linux.org.ru/help/lorcode.md) markup using [Pandoc](http://pandoc.org). Supports CommonMark with some additions:
+        
+        - headers of any level are converted to `[strong]text[/strong]`;
+        - use SO mention/notify syntax `@maxcom` to produce `[user]maxcom[/user]`.
 homepage:            http://github.com/smaximov/lordown#readme
 license:             BSD3
 license-file:        LICENSE
